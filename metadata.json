@@ -1,0 +1,6 @@
+{
+  "name": "Jennifer Depler Counseling Rev 1",
+  "description": "Professional trauma-informed counseling for adults in Loveland, Fort Collins, Berthoud, Longmont, and Northern Colorado. Jennifer Depler, LPCC specializes in trauma recovery, anxiety, and depression.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

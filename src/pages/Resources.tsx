@@ -31,14 +31,14 @@ const RESOURCES = [
 
 export function Resources() {
   return (
-    <div className="pb-32 bg-brand-cream-50">
+    <div className="pb-32 bg-brand-bg">
        <section className="pt-20 pb-32 px-8 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-serif text-brand-green-900 mb-8 leading-tight">
-               Tools for <span className="italic font-light text-brand-green-600">Self-Discovery.</span>
+            <h1 className="text-5xl md:text-7xl font-serif text-brand-heading mb-8 leading-tight">
+               Tools for <span className="italic font-light">Self-Discovery.</span>
             </h1>
-            <p className="text-xl text-brand-text-muted leading-relaxed font-sans">
+            <p className="text-xl text-brand-body leading-relaxed font-sans">
                A curated collection of tools, education, and inspiration to support your journey between our sessions.
             </p>
           </div>
@@ -55,19 +55,19 @@ export function Resources() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="p-10 md:p-14 rounded-[60px] bg-white border border-brand-cream-200 flex flex-col gap-10 shadow-sm hover:shadow-xl transition-all group"
+                    className="p-10 md:p-14 rounded-[60px] bg-white border border-brand-border flex flex-col gap-10 shadow-sm hover:shadow-xl transition-all group"
                   >
                       <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-2xl bg-brand-green-50 flex items-center justify-center shrink-0 group-hover:bg-brand-green-100 transition-colors">
-                               <group.icon className="w-5 h-5 text-brand-green-600" />
+                          <div className="w-12 h-12 rounded-2xl bg-brand-sage/20 flex items-center justify-center shrink-0 group-hover:bg-brand-sage/40 transition-colors">
+                               <group.icon className="w-5 h-5 text-brand-primary" />
                           </div>
-                          <h3 className="text-2xl font-serif text-brand-green-900">{group.category}</h3>
+                          <h3 className="text-2xl font-serif text-brand-heading">{group.category}</h3>
                       </div>
                       <div className="flex flex-col gap-8">
                           {group.items.map((item, idx) => (
-                              <div key={idx} className="group cursor-default border-l-2 border-transparent hover:border-brand-green-600 pl-4 transition-all duration-300">
-                                  <h4 className="text-lg font-serif text-brand-green-900 mb-1 group-hover:text-brand-green-600 transition-colors leading-tight">{item.title}</h4>
-                                  <p className="text-[10px] text-brand-text-muted uppercase tracking-[0.2em] font-sans font-bold opacity-60">{item.desc}</p>
+                              <div key={idx} className="group cursor-default border-l-2 border-transparent hover:border-brand-sage pl-4 transition-all duration-300">
+                                  <h4 className="text-lg font-serif text-brand-heading mb-1 transition-colors leading-tight">{item.title}</h4>
+                                  <p className="text-[10px] text-brand-body uppercase tracking-[0.2em] font-sans font-bold opacity-60">{item.desc}</p>
                               </div>
                           ))}
                       </div>

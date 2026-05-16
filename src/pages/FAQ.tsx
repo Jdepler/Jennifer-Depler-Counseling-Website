@@ -126,15 +126,15 @@ function FaqItem({ q, a }: FAQItem) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded-[40px] border border-brand-cream-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-[40px] border border-brand-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-8 py-6 text-left flex items-center justify-between group"
       >
-        <span className="font-serif text-xl md:text-2xl text-brand-green-900 leading-tight pr-8">{q}</span>
+        <span className="font-serif text-xl md:text-2xl text-brand-heading leading-tight pr-8">{q}</span>
         <div className={cn(
-            "w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-brand-green-100 group-hover:bg-brand-green-50 transition-all transform",
-            isOpen ? "rotate-180 bg-brand-green-600 border-brand-green-600 text-white" : "text-brand-green-600"
+            "w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-brand-sage/30 group-hover:bg-brand-sage/20 transition-all transform",
+            isOpen ? "rotate-180 bg-brand-sage border-brand-sage text-brand-heading" : "text-brand-primary"
         )}>
             <Plus className={cn("w-5 h-5 transition-transform", isOpen && "rotate-45")} />
         </div>
@@ -147,7 +147,7 @@ function FaqItem({ q, a }: FAQItem) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
           >
-            <div className="px-8 pb-8 text-brand-text-muted leading-relaxed font-sans text-lg border-t border-brand-cream-50 pt-6">
+            <div className="px-8 pb-8 text-brand-body leading-relaxed font-sans text-lg border-t border-brand-bg pt-6">
               {a}
             </div>
           </motion.div>
@@ -159,14 +159,14 @@ function FaqItem({ q, a }: FAQItem) {
 
 export function FAQ() {
   return (
-    <div className="pb-32 bg-brand-cream-50">
+    <div className="pb-32 bg-brand-bg">
       <section className="pt-20 pb-20 px-8 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-serif text-brand-green-900 mb-8 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-serif text-brand-heading mb-8 leading-tight">
               Helpful information, in case you're wondering
             </h1>
-            <p className="text-xl text-brand-text-muted leading-relaxed font-sans">
+            <p className="text-xl text-brand-body leading-relaxed font-sans">
               Find clarity on common questions about the therapeutic process, scheduling, and what to expect in our work together.
             </p>
           </div>
@@ -184,12 +184,12 @@ export function FAQ() {
       </section>
 
       <section className="pt-40 px-8 md:px-12 text-center">
-          <div className="max-w-2xl mx-auto p-12 bg-white rounded-[60px] border border-brand-cream-200 shadow-sm">
-            <h2 className="text-3xl font-serif text-brand-green-900 mb-6">Have more questions?</h2>
-            <p className="text-brand-text-muted mb-10 font-sans">I'm happy to discuss any other questions or concerns you have during our initial consultation call.</p>
+          <div className="max-w-2xl mx-auto p-12 bg-white rounded-[60px] border border-brand-border shadow-sm">
+            <h2 className="text-3xl font-serif text-brand-heading mb-6">Have more questions?</h2>
+            <p className="text-brand-body mb-10 font-sans">I'm happy to discuss any other questions or concerns you have during our initial consultation call.</p>
             <NavLink
                 to="/contact"
-                className="inline-block bg-brand-green-600 text-white px-10 py-4 rounded-full text-sm font-semibold uppercase tracking-widest hover:bg-brand-green-700 transition-all shadow-lg"
+                className="inline-block bg-brand-sage text-brand-heading px-10 py-4 rounded-full text-sm font-medium uppercase tracking-widest hover:opacity-90 transition-all shadow-xl shadow-brand-sage/20"
             >
                 Reach Out Directly
             </NavLink>

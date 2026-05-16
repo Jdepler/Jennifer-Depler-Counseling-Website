@@ -50,16 +50,16 @@ const SERVICES = [
 
 export function Services() {
   return (
-    <div className="pb-32 bg-brand-cream-50">
+    <div className="pb-32 bg-brand-bg">
        {/* Hero */}
        <section className="pt-20 pb-32 px-8 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-serif text-brand-green-900 mb-8 leading-tight">
-              A Holistic Approach to <br className="hidden md:block" /> <span className="italic font-light text-brand-green-600">Mental and Emotional Wellness</span>
+            <h1 className="text-5xl md:text-7xl font-serif text-brand-heading mb-8 leading-tight">
+               A Holistic Approach to <br className="hidden md:block" /> <span className="italic font-light">Mental and Emotional Wellness</span>
             </h1>
-            <p className="text-xl text-brand-text-muted leading-relaxed max-w-2xl font-sans">
-              I combine evidence-based methods with a collaborative relational style to help you process deep struggles and move toward a more balanced and authentic life.
+            <p className="text-xl text-brand-body leading-relaxed max-w-2xl font-sans">
+               I combine evidence-based methods with a collaborative relational style to help you process deep struggles and move toward a more balanced and authentic life.
             </p>
           </div>
         </div>
@@ -76,7 +76,7 @@ export function Services() {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true, margin: "-100px" }}
                           transition={{ duration: 0.8, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                          className="bg-white rounded-[60px] border border-brand-cream-200 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,67,50,0.08)] transition-all duration-500 group relative overflow-hidden flex flex-col"
+                          className="bg-white rounded-[60px] border border-brand-border shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(64,69,68,0.08)] transition-all duration-500 group relative overflow-hidden flex flex-col"
                         >
                            {/* Card Header Image */}
                            <div className="h-64 relative overflow-hidden">
@@ -86,19 +86,19 @@ export function Services() {
                                 className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                                 referrerPolicy="no-referrer"
                               />
-                              <div className="absolute inset-0 bg-brand-green-900/10 mix-blend-multiply"></div>
+                              <div className="absolute inset-0 bg-brand-primary/10 mix-blend-multiply"></div>
                            </div>
 
                            <div className="p-10 md:p-14 relative z-10 flex-grow">
                               <div className="flex flex-wrap gap-2 mb-6">
                                   {s.tags.map(tag => (
-                                      <span key={tag} className="text-[10px] uppercase tracking-widest bg-brand-green-50 text-brand-green-700 font-bold px-4 py-1.5 rounded-full">
+                                      <span key={tag} className="text-[10px] uppercase tracking-widest bg-brand-sage/40 text-brand-secondary font-bold px-4 py-1.5 rounded-full">
                                           {tag}
                                       </span>
                                   ))}
                               </div>
-                              <h3 className="text-3xl md:text-4xl font-serif text-black mb-6 leading-tight">{s.title}</h3>
-                              <p className="text-brand-text-muted leading-relaxed font-sans text-lg">
+                              <h3 className="text-3xl md:text-4xl font-serif text-brand-heading mb-6 leading-tight">{s.title}</h3>
+                              <p className="text-brand-body leading-relaxed font-sans text-lg">
                                   {s.description}
                               </p>
                           </div>
@@ -109,11 +109,11 @@ export function Services() {
       </section>
 
       {/* Modalities */}
-      <section className="py-40 px-8 md:px-12 bg-white mt-32 border-y border-brand-cream-200">
+      <section className="py-40 px-8 md:px-12 bg-white mt-32 border-y border-brand-border">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
               <div>
-                <h2 className="text-4xl md:text-6xl font-serif text-black mb-12 leading-tight">
-                    Therapeutic <br /> <span className="italic font-light text-black">Approaches</span>
+                <h2 className="text-4xl md:text-6xl font-serif text-brand-heading mb-12 leading-tight">
+                    Therapeutic <br /> <span className="italic font-light">Approaches</span>
                 </h2>
                 <div className="space-y-12">
                    {[
@@ -128,34 +128,34 @@ export function Services() {
                        whileInView={{ opacity: 1, x: 0 }}
                        viewport={{ once: true }}
                        transition={{ duration: 0.6, delay: index * 0.15 }}
-                       className="relative pl-10 border-l-2 border-brand-green-100 py-1"
+                       className="relative pl-10 border-l-2 border-brand-sage/40 py-1"
                      >
-                        <div className="absolute left-[-5px] top-4 w-2 h-2 rounded-full bg-brand-green-600"></div>
-                        <h4 className="text-2xl font-serif text-black mb-3">{approach.title}</h4>
-                        <p className="text-brand-text-muted text-lg leading-relaxed font-sans">{approach.desc}</p>
+                        <div className="absolute left-[-5px] top-4 w-2 h-2 rounded-full bg-brand-primary"></div>
+                        <h4 className="text-2xl font-serif text-brand-heading mb-3">{approach.title}</h4>
+                        <p className="text-brand-body text-lg leading-relaxed font-sans">{approach.desc}</p>
                      </motion.div>
                    ))}
                 </div>
               </div>
               <div className="relative hidden lg:block">
-                  <div className="aspect-[4/5] rounded-[120px] overflow-hidden shadow-2xl border-[12px] border-brand-cream-50 relative group">
+                  <div className="aspect-[4/5] rounded-[120px] overflow-hidden shadow-2xl border-[12px] border-brand-bg relative group">
                     <img
                         src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=1200"
                         alt="Calm Focus"
                         className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000"
                         referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-brand-green-600/10 mix-blend-overlay"></div>
+                    <div className="absolute inset-0 bg-brand-primary/10 mix-blend-overlay"></div>
                   </div>
-                  <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-cream-200 rounded-full -z-10 blur-2xl opacity-40"></div>
+                  <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-sage/20 rounded-full -z-10 blur-2xl opacity-40"></div>
               </div>
           </div>
       </section>
 
       {/* CTA */}
-      <section className="py-32 md:py-48 px-8 md:px-12 flex flex-col items-center text-center bg-brand-cream-100 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(27,67,50,0.08),transparent_50%)]"></div>
-          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(172,183,176,0.1),transparent_50%)]"></div>
+      <section className="py-32 md:py-48 px-8 md:px-12 flex flex-col items-center text-center bg-brand-card relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(194,165,107,0.08),transparent_50%)]"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(141,155,147,0.1),transparent_50%)]"></div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -163,16 +163,16 @@ export function Services() {
               viewport={{ once: true }}
               transition={{ duration: 1 }}
             >
-              <h2 className="text-4xl md:text-6xl font-serif text-black mb-8 leading-tight">
-                  Move toward <br /><span className="italic font-light text-brand-green-600">Calm and Steady Strength</span>.
+              <h2 className="text-4xl md:text-6xl font-serif text-brand-heading mb-8 leading-tight">
+                  Move toward <br /><span className="italic font-light">Calm and Steady Strength</span>.
               </h2>
-              <p className="text-brand-text-muted mb-12 max-w-2xl mx-auto leading-relaxed italic text-xl md:text-2xl font-serif">
+              <p className="text-brand-body mb-12 max-w-2xl mx-auto leading-relaxed italic text-xl md:text-2xl font-serif">
                  Healing is a reclamation of your own peace. If you're ready to explore what's next in a space of safety and understanding, I invite you to reach out.
               </p>
               <div className="flex justify-center">
                     <NavLink
                       to="/contact"
-                      className="group bg-brand-green-600 text-white px-12 py-5 rounded-full text-sm font-semibold uppercase tracking-widest hover:bg-brand-green-700 transition-all shadow-xl flex items-center gap-4"
+                      className="group bg-brand-sage text-brand-heading px-12 py-5 rounded-full text-sm font-medium uppercase tracking-widest hover:opacity-90 transition-all shadow-xl shadow-brand-sage/20 flex items-center gap-4"
                     >
                         Schedule Your Free Consultation
                         <Wind className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

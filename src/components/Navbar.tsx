@@ -29,16 +29,16 @@ export function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
         scrolled
-          ? 'bg-brand-cream-50/90 backdrop-blur-md border-b border-brand-green-100 py-5 shadow-sm'
+          ? 'bg-brand-bg/90 backdrop-blur-md border-b border-brand-border py-5 shadow-sm'
           : 'bg-transparent py-10'
       )}
     >
       <div className="max-w-7xl mx-auto px-8 md:px-12 flex items-center justify-between">
         <NavLink to="/" className="flex flex-col group">
-          <span className="text-4xl md:text-5xl font-serif tracking-tight text-brand-green-700 leading-none">Jennifer Depler</span>
-          <span className="text-sm md:text-base uppercase tracking-[0.2em] font-semibold opacity-70 mt-1">Counseling</span>
+          <span className="text-4xl md:text-5xl font-serif tracking-tight text-brand-heading leading-none">Jennifer Depler</span>
+          <span className="text-sm md:text-base uppercase tracking-[0.2em] font-medium opacity-70 mt-1">Counseling</span>
         </NavLink>
-
+ 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
@@ -47,8 +47,8 @@ export function Navbar() {
               to={item.href}
               className={({ isActive }) =>
                 cn(
-                  'font-sans text-sm font-medium transition-colors hover:text-brand-green-700 pb-1 border-b-2 transition-all',
-                  isActive ? 'text-brand-green-700 border-brand-green-700' : 'text-brand-text-dark/70 border-transparent'
+                  'font-sans text-sm font-medium transition-colors hover:text-brand-primary hover:border-brand-sage pb-1 border-b-2 transition-all',
+                  isActive ? 'text-brand-primary border-brand-primary' : 'text-brand-body/70 border-transparent'
                 )
               }
             >
@@ -57,21 +57,21 @@ export function Navbar() {
           ))}
           <NavLink
             to="/contact"
-            className="px-6 py-2.5 bg-brand-green-600 text-white rounded-full text-xs font-semibold shadow-sm hover:bg-brand-green-700 transition-all"
+            className="px-6 py-2.5 bg-brand-primary text-brand-btn-text rounded-full text-xs font-medium shadow-sm hover:opacity-90 transition-all"
           >
             Schedule Consultation
           </NavLink>
         </div>
-
+ 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 text-brand-green-700"
+          className="md:hidden p-2 text-brand-heading"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
-
+ 
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -79,7 +79,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-brand-cream-50 border-b border-brand-green-100 overflow-hidden"
+            className="md:hidden bg-brand-bg border-b border-brand-border overflow-hidden"
           >
             <div className="flex flex-col gap-4 p-6">
               {navItems.map((item) => (
@@ -90,7 +90,7 @@ export function Navbar() {
                   className={({ isActive }) =>
                     cn(
                       'font-sans text-lg tracking-wide',
-                      isActive ? 'text-brand-green-600 font-medium' : 'text-brand-text-muted'
+                      isActive ? 'text-brand-primary font-medium' : 'text-brand-body/70'
                     )
                   }
                 >
@@ -100,7 +100,7 @@ export function Navbar() {
               <NavLink
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="bg-brand-green-600 text-white text-center py-4 rounded-xl font-sans text-sm uppercase tracking-widest font-semibold"
+                className="bg-brand-primary text-brand-btn-text text-center py-4 rounded-xl font-sans text-sm uppercase tracking-widest font-medium"
               >
                 Schedule Free Consultation
               </NavLink>

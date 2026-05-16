@@ -1,33 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:wght@600&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", serif;
-  --font-outfit: "Outfit", sans-serif;
+  --font-serif: "Lora", serif;
 
-  --color-brand-green-50: #F1F3F2;
-  --color-brand-green-100: #E2E7E5;
-  --color-brand-green-200: #CDD5D1;
-  --color-brand-green-600: #ACB7B0;
-  --color-brand-green-700: #8C9993;
-  --color-brand-green-900: #1B4332;
-  
-  --color-brand-cream-50: #F9F7F2;
-  --color-brand-cream-100: #F5F1ED;
-  --color-brand-cream-200: #E3D9C6;
-  
-  --color-brand-text-dark: #3D3D3D;
-  --color-brand-text-muted: #5C5C5C;
+  --color-brand-bg: #E7DED1;
+  --color-brand-card: #F3F0EA;
+  --color-brand-heading: #404544;
+  --color-brand-body: #505654;
+  --color-brand-primary: #C2A56B;
+  --color-brand-btn-text: #FFFFFF;
+  --color-brand-secondary: #8D9B93;
+  --color-brand-sage: #BEC7C4;
+  --color-brand-border: #D7D1C7;
 }
 
 @layer base {
   body {
-    @apply bg-brand-cream-50 text-brand-text-dark selection:bg-brand-green-100;
+    @apply font-sans font-normal bg-brand-bg text-brand-body selection:bg-brand-sage/40;
   }
   
-  h1, h2, h3, h4 {
-    @apply font-serif;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold text-brand-heading;
   }
 }
 

@@ -24,15 +24,15 @@ export function About() {
     setCurrentBelief((prev) => (prev - 1 + BELIEFS.length) % BELIEFS.length);
   };
   return (
-    <div className="pb-32 bg-brand-cream-50">
+    <div className="pb-32 bg-brand-bg">
       {/* Header */}
       <section className="pt-20 pb-20 px-8 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-serif text-brand-green-900 mb-8 leading-tight">
-              A Space For Healing, <br className="hidden md:block" /> <span className="italic font-light">Growth and Hope</span>
+            <h1 className="text-5xl md:text-7xl font-serif text-brand-heading mb-8 leading-tight">
+              Compassionate Support <br className="hidden md:block" /> <span className="italic font-light">for Life's Difficult Seasons</span>
             </h1>
-            <p className="text-lg md:text-xl text-brand-text-muted leading-relaxed font-sans">
+            <p className="text-lg md:text-xl text-brand-body leading-relaxed font-sans">
               I'm Jennifer, a trauma-informed therapist dedicated to supporting and guiding you when life feels overwhelming.
             </p>
           </div>
@@ -43,7 +43,7 @@ export function About() {
       <section className="px-8 md:px-12 py-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div className="relative group">
-            <div className="aspect-[4/5] rounded-[48px] overflow-hidden shadow-2xl border-[12px] border-white bg-white">
+            <div className="aspect-[4/5] rounded-[48px] overflow-hidden shadow-2xl border-[12px] border-white/50 bg-white">
               <img
                 src={mainProfilePhoto}
                 alt="Jennifer Depler, LPCC"
@@ -51,11 +51,8 @@ export function About() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 lg:right-4 bg-brand-green-600 p-6 md:p-8 rounded-[32px] text-white shadow-xl hidden md:block border-[6px] border-white z-10">
+            <div className="absolute -bottom-6 -right-6 lg:right-4 bg-brand-sage p-6 md:p-8 rounded-[32px] text-brand-heading shadow-xl hidden md:block border-[6px] border-white/50 z-10">
                <div className="relative">
-                 <div className="absolute -top-2 -left-2 w-4 h-4 text-brand-green-300 opacity-30">
-                   <Quote className="w-full h-full fill-current" />
-                 </div>
                  <p className="text-[10px] uppercase font-bold tracking-[0.2em] mb-2 opacity-60 font-sans">Credentials</p>
                  <p className="font-serif text-xl md:text-2xl leading-tight">Jennifer Depler <br/><span className="text-sm font-sans font-normal opacity-90 italic">MA, LPCC</span></p>
                </div>
@@ -63,7 +60,7 @@ export function About() {
           </div>
 
           <div className="space-y-12">
-            <div className="prose prose-lg text-brand-text-dark/90 leading-relaxed font-sans max-w-none">
+            <div className="prose prose-lg text-brand-body leading-relaxed font-sans max-w-none">
               <p className="mb-6 text-lg">
                 I am a Licensed Professional Counselor Candidate (LPCC) in the state of Colorado. I earned my Master of Arts in Clinical Mental Health Counseling from Colorado Christian University and a Bachelor of Arts in Human Relations from Milligan University.
               </p>
@@ -82,25 +79,25 @@ export function About() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
-               <div className="p-8 rounded-[40px] bg-white border border-brand-cream-200 shadow-sm">
-                  <Compass className="w-8 h-8 text-brand-green-600 mb-6" />
-                  <h4 className="font-serif text-2xl mb-3 text-brand-green-900">Relational Style</h4>
-                  <p className="text-sm text-brand-text-muted leading-relaxed">I value real, honest connection infused with warmth and humor. Our relationship is the foundation for your healing journey.</p>
+               <div className="p-8 rounded-[40px] bg-white border border-brand-border shadow-sm">
+                  <Compass className="w-8 h-8 text-brand-primary mb-6" />
+                  <h4 className="font-serif text-2xl mb-3 text-brand-heading">Relational Style</h4>
+                  <p className="text-sm text-brand-body leading-relaxed">I value real, honest connection infused with warmth and humor. Our relationship is the foundation for your healing journey.</p>
                </div>
-               <div className="p-8 rounded-[40px] bg-white border border-brand-cream-200 shadow-sm">
-                  <Shield className="w-8 h-8 text-brand-green-600 mb-6" />
-                  <h4 className="font-serif text-2xl mb-3 text-brand-green-900">Trauma-Informed</h4>
-                  <p className="text-sm text-brand-text-muted leading-relaxed">Safety is the priority. We move at a pace that respects the needs of your nervous system, while integrating practical tools for emotion regulation to expand its capacity.</p>
+               <div className="p-8 rounded-[40px] bg-white border border-brand-border shadow-sm">
+                  <Shield className="w-8 h-8 text-brand-primary mb-6" />
+                  <h4 className="font-serif text-2xl mb-3 text-brand-heading">Trauma-Informed</h4>
+                  <p className="text-sm text-brand-body leading-relaxed">Safety is the priority. We move at a pace that respects the needs of your nervous system, while integrating practical tools for emotion regulation to expand its capacity.</p>
                </div>
             </div>
 
-            <div className="pt-12 border-t border-brand-cream-200">
-              <h2 className="text-3xl md:text-4xl font-serif text-brand-green-900 mb-6 italic">
+            <div className="pt-12 border-t border-brand-border">
+              <h2 className="text-3xl md:text-4xl font-serif text-brand-heading mb-6 italic">
                 I believe...
               </h2>
-              <div className="mb-16 relative bg-white p-10 md:p-14 rounded-[60px] border border-brand-cream-200 shadow-sm overflow-hidden group">
+              <div className="mb-16 relative bg-white p-10 md:p-14 rounded-[60px] border border-brand-border shadow-sm overflow-hidden group">
                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Quote className="w-24 h-24 text-brand-green-600" />
+                  <Quote className="w-24 h-24 text-brand-primary" />
                 </div>
                 
                 <div className="relative z-10 min-h-[180px] flex items-center">
@@ -113,7 +110,7 @@ export function About() {
                       transition={{ duration: 0.5, ease: "easeOut" }}
                       className="w-full"
                     >
-                      <p className="text-lg md:text-xl font-serif text-brand-green-800 leading-relaxed italic">
+                      <p className="text-lg md:text-xl font-serif text-brand-heading leading-relaxed italic">
                         {BELIEFS[currentBelief]}
                       </p>
                     </motion.div>
@@ -127,7 +124,7 @@ export function About() {
                         key={idx}
                         onClick={() => setCurrentBelief(idx)}
                         className={`h-1.5 rounded-full transition-all duration-300 ${
-                          currentBelief === idx ? 'w-8 bg-brand-green-600' : 'w-2 bg-brand-green-200'
+                          currentBelief === idx ? 'w-8 bg-brand-primary' : 'w-2 bg-brand-sage/40'
                         }`}
                         aria-label={`Go to belief ${idx + 1}`}
                       />
@@ -136,14 +133,14 @@ export function About() {
                   <div className="flex gap-4">
                     <button
                       onClick={prevBelief}
-                      className="p-3 rounded-full border border-brand-green-100 text-brand-green-600 hover:bg-brand-green-50 transition-colors"
+                      className="p-3 rounded-full border border-brand-border text-brand-primary hover:bg-brand-bg transition-colors"
                       aria-label="Previous belief"
                     >
                       <ChevronLeft className="w-5 h-5" />
                     </button>
                     <button
                       onClick={nextBelief}
-                      className="p-3 rounded-full bg-brand-green-600 text-white shadow-lg hover:bg-brand-green-700 transition-colors"
+                      className="p-3 rounded-full bg-brand-sage text-brand-heading shadow-md hover:opacity-90 transition-colors"
                       aria-label="Next belief"
                     >
                       <ChevronRight className="w-5 h-5" />
@@ -153,13 +150,13 @@ export function About() {
               </div>
             </div>
 
-            <div className="pt-12 border-t border-brand-cream-200">
-              <h2 className="text-4xl md:text-5xl font-serif text-brand-green-900 mb-8 italic relative inline-block">
+            <div className="pt-12 border-t border-brand-border">
+              <h2 className="text-4xl md:text-5xl font-serif text-brand-heading mb-8 italic relative inline-block">
                 Beyond the Office
-                <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-green-100 rounded-full"></span>
+                <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-sage/40 rounded-full"></span>
               </h2>
               <div className="flex flex-col md:flex-row gap-12 items-start">
-                <div className="prose prose-lg text-brand-text-dark/80 leading-relaxed font-sans max-w-none flex-1">
+                <div className="prose prose-lg text-brand-body leading-relaxed font-sans max-w-none flex-1">
                   <p className="mb-4 text-lg">
                     When I’m not in the therapy room, I’m settled into the heart of my life in Northern Colorado. I am a wife and a mother to two grown children and their spouses, and I deeply cherish the time spent with my large extended family nearby.
                   </p>
@@ -179,9 +176,9 @@ export function About() {
                 <div className="w-full md:w-72 lg:w-96 shrink-0 pt-8 md:pt-0">
                   <div className="relative group">
                     {/* Decorative organic shape behind photo */}
-                    <div className="absolute -inset-4 bg-brand-green-100/30 rounded-[50px] rotate-3 -z-10 group-hover:rotate-6 transition-transform duration-700" />
+                    <div className="absolute -inset-4 bg-brand-sage/20 rounded-[50px] rotate-3 -z-10 group-hover:rotate-6 transition-transform duration-700" />
                     
-                    <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-[0_32px_64px_rgba(0,0,0,0.12)] border-8 border-white transform md:-rotate-1 hover:rotate-0 transition-transform duration-500 bg-brand-cream-100">
+                    <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-[0_32px_64px_rgba(0,0,0,0.12)] border-8 border-white/50 transform md:-rotate-1 hover:rotate-0 transition-transform duration-500 bg-brand-card">
                       <img 
                         src={carouselPhoto} 
                         alt="Jennifer Depler on a carousel goose" 
@@ -196,38 +193,45 @@ export function About() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-32 px-8 md:px-12 bg-brand-green-900 text-brand-cream-50 mt-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 -skew-x-12" />
+      <section className="py-32 px-8 md:px-12 bg-brand-card mt-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-sage/10 -skew-x-12" />
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row gap-20 items-center">
             <div className="lg:w-1/2">
-                <h2 className="text-4xl md:text-6xl font-serif mb-10 leading-tight">My Commitment <br /> <span className="italic font-light text-brand-green-100">To You</span></h2>
-                <div className="space-y-8 text-brand-cream-100/80 leading-relaxed font-sans">
+                <motion.h2 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="text-4xl md:text-6xl font-serif mb-10 leading-[1.1] tracking-tight"
+                >
+                  <span className="italic font-light">My Commitments to You</span>
+                </motion.h2>
+                <div className="space-y-8 text-brand-body leading-relaxed font-sans">
                    <p className="flex items-start gap-4">
-                      <span className="w-8 h-8 rounded-full bg-brand-green-600 flex items-center justify-center shrink-0 mt-1 shadow-md"><Heart className="w-4 h-4 text-white" /></span>
+                      <span className="w-8 h-8 rounded-full bg-brand-sage flex items-center justify-center shrink-0 mt-1 shadow-md"><Heart className="w-4 h-4 text-brand-heading" /></span>
                       <span className="text-lg">To offer a combination of clinical skill, kindness, and curiosity.</span>
                    </p>
                    <p className="flex items-start gap-4">
-                      <span className="w-8 h-8 rounded-full bg-brand-green-600 flex items-center justify-center shrink-0 mt-1 shadow-md"><Compass className="w-4 h-4 text-white" /></span>
+                      <span className="w-8 h-8 rounded-full bg-brand-sage flex items-center justify-center shrink-0 mt-1 shadow-md"><Compass className="w-4 h-4 text-brand-heading" /></span>
                       <span className="text-lg">To respect your unique story and internal landscape.</span>
                    </p>
                    <p className="flex items-start gap-4">
-                      <span className="w-8 h-8 rounded-full bg-brand-green-600 flex items-center justify-center shrink-0 mt-1 shadow-md"><Shield className="w-4 h-4 text-white" /></span>
+                      <span className="w-8 h-8 rounded-full bg-brand-sage flex items-center justify-center shrink-0 mt-1 shadow-md"><Shield className="w-4 h-4 text-brand-heading" /></span>
                       <span className="text-lg">To honor the deep wisdom of your lived experience while addressing the unique transitions of later life.</span>
                    </p>
                    <p className="flex items-start gap-4">
-                      <span className="w-8 h-8 rounded-full bg-brand-green-600 flex items-center justify-center shrink-0 mt-1 shadow-md"><Anchor className="w-4 h-4 text-white" /></span>
+                      <span className="w-8 h-8 rounded-full bg-brand-sage flex items-center justify-center shrink-0 mt-1 shadow-md"><Anchor className="w-4 h-4 text-brand-heading" /></span>
                       <span className="text-lg">To remain a steady, grounded presence as you navigate deep work.</span>
                    </p>
                    <p className="flex items-start gap-4">
-                      <span className="w-8 h-8 rounded-full bg-brand-green-600 flex items-center justify-center shrink-0 mt-1 shadow-md"><Wind className="w-4 h-4 text-white" /></span>
+                      <span className="w-8 h-8 rounded-full bg-brand-sage flex items-center justify-center shrink-0 mt-1 shadow-md"><Wind className="w-4 h-4 text-brand-heading" /></span>
                       <span className="text-lg">To create a space where you can breathe again.</span>
                    </p>
                 </div>
             </div>
             <div className="lg:w-1/2">
-                <div className="bg-white/10 backdrop-blur-md p-12 rounded-[80px] border border-white/20 shadow-2xl transform lg:rotate-2">
-                    <p className="font-serif text-3xl italic leading-relaxed text-brand-cream-50">
+                <div className="bg-brand-sage/20 backdrop-blur-md p-12 rounded-[80px] border border-brand-border shadow-2xl transform lg:rotate-2">
+                    <p className="font-serif text-3xl italic leading-relaxed text-brand-heading">
                       Growth is the slow, steady work of tending the landscape of your heart, soul and mind and embracing the hope that has been waiting for you all along.
                     </p>
                 </div>
@@ -238,13 +242,13 @@ export function About() {
       {/* Next Steps */}
       <section className="pt-40 pb-12 px-8 md:px-12">
           <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-serif text-brand-green-900 mb-8">Ready to Connect?</h2>
-              <p className="text-lg text-brand-text-muted mb-12 leading-relaxed max-w-xl mx-auto font-sans">
+              <h2 className="text-4xl md:text-5xl font-serif text-brand-heading mb-8">Ready to Connect?</h2>
+              <p className="text-lg text-brand-body mb-12 leading-relaxed max-w-xl mx-auto font-sans">
                   I'd love to hear your story and see how I can support you on your path to wellness.
               </p>
               <NavLink
                 to="/contact"
-                className="inline-block bg-brand-green-600 text-white px-12 py-5 rounded-full text-sm font-semibold uppercase tracking-widest hover:bg-brand-green-700 transition-all shadow-xl shadow-brand-green-600/20"
+                className="inline-block bg-brand-sage text-brand-heading px-12 py-5 rounded-full text-sm font-medium uppercase tracking-widest hover:opacity-90 transition-all shadow-xl shadow-brand-sage/20"
               >
                 Schedule Consultation
               </NavLink>

@@ -12,7 +12,7 @@ export function Footer() {
               <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-brand-secondary mt-1">Counseling</span>
             </div>
             <p className="text-brand-body/60 text-sm leading-relaxed mb-8 font-sans">
-              “Nurturing Healing | Cultivating Health | Inspiring Hope”
+              Nurturing Healing | Cultivating Health | Inspiring Hope
             </p>
           </div>
 

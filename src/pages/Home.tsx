@@ -65,9 +65,9 @@ export function Home() {
                     </div>
                     
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-brand-heading leading-[1.1]">
-                      Nurturing <span className="italic font-light">Healing</span>,<br />
-                      Cultivating <span className="italic font-light">Health</span>,<br />
-                      Inspiring <span className="italic font-light">Hope</span>.
+                      Nurturing <span className="font-light">Healing</span>,<br />
+                      Cultivating <span className="font-light">Health</span>,<br />
+                      Inspiring <span className="font-light">Hope</span>.
                     </h1>
                     
                     <div className="flex flex-col sm:flex-row gap-5">
@@ -147,8 +147,8 @@ export function Home() {
                   <div className="h-px px-12 bg-brand-border/50"></div>
                 </div>
 
-                <p className="text-3xl md:text-5xl text-brand-heading leading-[1.2] font-serif italic mb-10 tracking-tight text-balance">
-                  A warm, grounded, and trauma-informed space to navigate life's challenges.
+                <p className="text-3xl md:text-5xl text-brand-heading leading-[1.2] font-serif mb-10 tracking-tight text-balance">
+                  A Warm, Grounded Space to Navigate Life's Challenges
                 </p>
               </motion.div>
 
@@ -158,7 +158,7 @@ export function Home() {
                   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                 }}
               >
-                <p className="text-2xl md:text-4xl text-brand-heading/80 leading-tight font-serif italic mb-12 font-light text-balance">
+                <p className="text-2xl md:text-4xl text-brand-heading/80 leading-tight font-serif mb-12 font-light text-balance">
                   Welcoming clients from late adolescence through the senior years.
                 </p>
                 
@@ -209,7 +209,7 @@ export function Home() {
                   className="w-full bg-white/80 p-12 md:p-16 rounded-[64px] shadow-sm border border-brand-border"
                 >
                   <MessageCircle className="w-12 h-12 text-brand-primary mb-10 opacity-10" />
-                  <p className="text-xl md:text-2xl text-brand-body italic leading-relaxed mb-12 font-serif text-balance">
+                  <p className="text-xl md:text-2xl text-brand-body leading-relaxed mb-12 font-serif text-balance">
                     {TESTIMONIALS[currentIndex].quote}
                   </p>
                   <div className="pt-10 border-t border-brand-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -270,7 +270,7 @@ export function Home() {
           <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_20%,rgba(190,199,196,0.2),transparent_50%)]"></div>
           
           <h2 className="text-4xl md:text-6xl text-brand-heading mb-12 relative z-10 leading-tight">
-            Let's start your <br /> <span className="italic font-light">healing journey</span> together.
+            Let's start your <br /> <span className="font-light">healing journey</span> together.
           </h2>
           <NavLink
             to="/contact"

@@ -57,7 +57,7 @@ export function Services() {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-serif text-brand-heading mb-8 leading-tight">
-               A Holistic Approach to <br className="hidden md:block" /> <span className="italic font-light">Mental and Emotional Wellness</span>
+               A Holistic Approach to <br className="hidden md:block" /> <span className="font-light">Mental and Emotional Wellness</span>
             </h1>
             <p className="text-xl text-brand-body leading-relaxed max-w-2xl font-sans">
                I combine evidence-based methods with a collaborative relational style to help you process deep struggles and move toward a more balanced and authentic life.
@@ -114,7 +114,7 @@ export function Services() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
               <div>
                 <h2 className="text-4xl md:text-6xl font-serif text-brand-heading mb-12 leading-tight">
-                    Therapeutic <br /> <span className="italic font-light">Approaches</span>
+                    Therapeutic <br /> <span className="font-light">Approaches</span>
                 </h2>
                 <div className="space-y-12">
                    {[
@@ -165,9 +165,9 @@ export function Services() {
               transition={{ duration: 1 }}
             >
               <h2 className="text-4xl md:text-6xl font-serif text-brand-heading mb-8 leading-tight">
-                  Move toward <br /><span className="italic font-light">Calm and Steady Strength</span>.
+                  Move toward <br /><span className="font-light">Calm and Steady Strength</span>.
               </h2>
-              <p className="text-brand-body mb-12 max-w-2xl mx-auto leading-relaxed italic text-xl md:text-2xl font-serif">
+              <p className="text-brand-body mb-12 max-w-2xl mx-auto leading-relaxed text-xl md:text-2xl font-serif">
                  Healing is a reclamation of your own peace. If you're ready to explore what's next in a space of safety and understanding, I invite you to reach out.
               </p>
               <div className="flex justify-center">

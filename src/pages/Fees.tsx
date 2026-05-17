@@ -49,7 +49,7 @@ export function Fees() {
                   </div>
                   <div className="mt-12 p-10 bg-brand-sage/20 rounded-[40px] border border-brand-border flex items-start gap-6">
                       <ShieldCheck className="w-6 h-6 text-brand-primary shrink-0 mt-1" />
-                      <p className="text-base text-brand-heading leading-relaxed italic font-serif">
+                      <p className="text-base text-brand-heading leading-relaxed font-serif">
                         I reserve a limited number of sliding scale spots for those experiencing financial hardship. Please inquire if you would like to apply.
                       </p>
                   </div>
@@ -124,7 +124,7 @@ export function Fees() {
                               <p>
                                 If you receive a bill that is at least $400 more than your Good Faith Estimate, you can dispute the bill.
                               </p>
-                              <p className="italic">
+                              <p>
                                 For questions or more information about your right to a Good Faith Estimate, visit www.cms.gov/nosurprises or call 1-800-985-3059.
                               </p>
                             </div>
@@ -169,7 +169,7 @@ export function Fees() {
                               <p>
                                 The No Surprises Act protects patients from unexpected bills in emergency settings. Since I operate as a private pay practice, you will always be informed of your costs before service.
                               </p>
-                              <p className="italic">
+                              <p>
                                 For more information on your rights under the No Surprises Act, visit www.cms.gov/nosurprises.
                               </p>
                             </div>

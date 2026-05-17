@@ -36,7 +36,7 @@ export function Resources() {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-serif text-brand-heading mb-8 leading-tight">
-               Tools for <span className="italic font-light">Self-Discovery.</span>
+               Tools for <span className="font-light">Self-Discovery.</span>
             </h1>
             <p className="text-xl text-brand-body leading-relaxed font-sans">
                A curated collection of tools, education, and inspiration to support your journey between our sessions.

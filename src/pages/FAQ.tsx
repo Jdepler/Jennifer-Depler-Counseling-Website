@@ -1,4 +1,4 @@
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, Leaf } from 'lucide-react';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { NavLink } from 'react-router-dom';
@@ -126,12 +126,18 @@ function FaqItem({ q, a }: FAQItem) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded-[40px] border border-brand-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+    <div className={cn(
+      "bg-white rounded-[40px] border border-brand-border overflow-hidden shadow-sm hover:shadow-md transition-all duration-300",
+      isOpen && "border-brand-sage/60 ring-1 ring-brand-sage/20 shadow-brand-sage/5"
+    )}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-8 py-6 text-left flex items-center justify-between group"
+        className="w-full px-8 py-6 text-left flex items-center justify-between group cursor-pointer"
       >
-        <span className="font-serif text-xl md:text-2xl text-brand-heading leading-tight pr-8">{q}</span>
+        <span className={cn(
+          "font-serif text-xl md:text-2xl text-brand-heading leading-tight pr-8 transition-colors",
+          isOpen && "text-brand-secondary"
+        )}>{q}</span>
         <div className={cn(
             "w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-brand-sage/30 group-hover:bg-brand-sage/20 transition-all transform",
             isOpen ? "rotate-180 bg-brand-sage border-brand-sage text-brand-heading" : "text-brand-primary"
@@ -147,7 +153,9 @@ function FaqItem({ q, a }: FAQItem) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
           >
-            <div className="px-8 pb-8 text-brand-body leading-relaxed font-sans text-lg border-t border-brand-bg pt-6">
+            <div className="px-8 pb-10 text-brand-body leading-relaxed font-sans text-lg border-t border-brand-bg/50 pt-8 relative">
+              {/* Decorative side accent */}
+              <div className="absolute left-0 top-8 bottom-10 w-1 bg-brand-sage rounded-r-full opacity-40"></div>
               {a}
             </div>
           </motion.div>
@@ -159,22 +167,32 @@ function FaqItem({ q, a }: FAQItem) {
 
 export function FAQ() {
   return (
-    <div className="pb-32 bg-brand-bg">
-      <section className="pt-20 pb-20 px-8 md:px-12">
+    <div className="pb-32 bg-brand-bg relative overflow-hidden">
+      {/* Decorative background blobs */}
+      <div className="absolute top-0 right-0 w-1/2 h-[500px] bg-gradient-to-l from-brand-sage/15 to-transparent -z-0 pointer-events-none" />
+      <div className="absolute top-[20%] -left-24 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl -z-0 pointer-events-none" />
+
+      <section className="pt-20 pb-20 px-8 md:px-12 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 rounded-full bg-brand-sage/20 text-brand-secondary border border-brand-sage/30">
+                <Leaf className="w-5 h-5" />
+              </div>
+              <div className="w-12 h-px bg-brand-sage/50"></div>
+            </div>
             <h1 className="text-5xl md:text-7xl font-serif text-brand-heading mb-8 leading-tight">
               Helpful information, in case you're wondering
             </h1>
-            <p className="text-xl text-brand-body leading-relaxed font-sans">
+            <p className="text-xl text-brand-body leading-relaxed font-sans max-w-2xl">
               Find clarity on common questions about the therapeutic process, scheduling, and what to expect in our work together.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="px-8 md:px-12">
-        <div className="max-w-4xl mx-auto space-y-4">
+      <section className="px-8 md:px-12 relative z-10">
+        <div className="max-w-4xl mx-auto space-y-6">
           {FAQS.map((faq) => (
             <div key={faq.q}>
               <FaqItem q={faq.q} a={faq.a} />
@@ -183,13 +201,16 @@ export function FAQ() {
         </div>
       </section>
 
-      <section className="pt-40 px-8 md:px-12 text-center">
-          <div className="max-w-2xl mx-auto p-12 bg-white rounded-[60px] border border-brand-border shadow-sm">
-            <h2 className="text-3xl font-serif text-brand-heading mb-6">Have more questions?</h2>
-            <p className="text-brand-body mb-10 font-sans">I'm happy to discuss any other questions or concerns you have during our initial consultation call.</p>
+      <section className="pt-40 px-8 md:px-12 text-center relative z-10">
+          <div className="max-w-3xl mx-auto p-12 md:p-20 bg-brand-sage/20 backdrop-blur-sm rounded-[60px] border border-brand-sage/30 shadow-sm relative overflow-hidden">
+            {/* Inner decorative element */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-brand-sage/50" />
+            
+            <h2 className="text-3xl md:text-4xl font-serif text-brand-heading mb-6">Have more questions?</h2>
+            <p className="text-brand-body text-lg mb-10 font-sans max-w-xl mx-auto">I'm happy to discuss any other questions or concerns you have during our initial consultation call.</p>
             <NavLink
                 to="/contact"
-                className="inline-block bg-brand-sage text-brand-heading px-10 py-4 rounded-full text-sm font-medium uppercase tracking-widest hover:opacity-90 transition-all shadow-xl shadow-brand-sage/20"
+                className="inline-block bg-brand-heading text-white px-12 py-5 rounded-full text-sm font-bold uppercase tracking-[0.2em] hover:bg-brand-secondary transition-all shadow-xl shadow-brand-heading/10"
             >
                 Reach Out Directly
             </NavLink>

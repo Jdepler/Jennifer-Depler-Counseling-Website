@@ -30,7 +30,7 @@ export function About() {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-serif text-brand-heading mb-8 leading-tight">
-              Compassionate Support <br className="hidden md:block" /> <span className="italic font-light">for Life's Difficult Seasons</span>
+              Exhale. <br className="hidden md:block" /> <span className="italic font-light">You Are Safe Here</span>
             </h1>
             <p className="text-lg md:text-xl text-brand-body leading-relaxed font-sans">
               I'm Jennifer, a trauma-informed therapist dedicated to supporting and guiding you when life feels overwhelming.
@@ -62,7 +62,7 @@ export function About() {
           <div className="space-y-12">
             <div className="prose prose-lg text-brand-body leading-relaxed font-sans max-w-none">
               <p className="mb-6 text-lg">
-                I am a Licensed Professional Counselor Candidate (LPCC) in the state of Colorado. I earned my Master of Arts in Clinical Mental Health Counseling from Colorado Christian University and a Bachelor of Arts in Human Relations from Milligan University.
+                I earned my Master of Arts in Clinical Mental Health Counseling from Colorado Christian University and a Bachelor of Arts in Human Relations from Milligan University.
               </p>
               
               <p className="mb-6 text-lg">

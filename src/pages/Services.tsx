@@ -2,6 +2,7 @@ import { Shield, Wind, Heart, Anchor, Sparkles, Brain, Leaf, Users } from 'lucid
 import { motion } from 'motion/react';
 import { NavLink } from 'react-router-dom';
 import spiritualHurtImg from '../assets/images/regenerated_image_1778714658027.jpg';
+import relationshipDifficultyImg from '../assets/images/regenerated_image_1779041207306.jpg';
 
 const SERVICES = [
   {
@@ -34,7 +35,7 @@ const SERVICES = [
   },
   {
     title: 'Relationship Difficulty',
-    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=800',
+    image: relationshipDifficultyImg,
     icon: Anchor,
     description: 'Navigating attachment wounds, betrayal trauma, or changes in relationship status. Rebuilding trust and understanding your patterns.',
     tags: ['Relational', 'Attachment-Informed']

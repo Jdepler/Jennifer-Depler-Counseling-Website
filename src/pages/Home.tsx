@@ -37,69 +37,135 @@ export function Home() {
 
   return (
     <div className="relative overflow-hidden bg-brand-bg min-h-screen">
-      {/* Hero Section */}
-      <section className="relative px-8 md:px-12 pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-12 gap-8 md:gap-12 items-center">
-          {/* Content Col */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="col-span-12 lg:col-span-7 flex flex-col gap-8 md:pr-12"
-          >
-            <div className="inline-block px-4 py-1.5 bg-brand-sage/30 text-brand-heading text-[11px] font-medium uppercase tracking-wider rounded-md self-start">
-              In-Person Therapy in Loveland • Serving Fort Collins, Berthoud, Longmont & Online across Colorado
-            </div>
-            
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif text-brand-heading leading-[1.05] text-balance">
-              Nurturing <span className="italic font-light">Healing</span>,<br />
-              Cultivating <span className="italic font-light">Health</span>,<br />
-              Inspiring <span className="italic font-light">Hope</span>.
-            </h1>
-            
-            <p className="text-lg md:text-xl leading-relaxed text-brand-body max-w-lg">
-              A warm, grounded, and trauma-informed space for adults in every season of life—from late adolescence through the senior years—to navigate challenges with authentic connection.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <NavLink
-                to="/about"
-                className="px-8 py-5 bg-brand-sage text-brand-heading rounded-full text-sm font-medium shadow-xl shadow-brand-sage/20 hover:opacity-90 transition-all text-center"
-              >
-                Learn More About My Style
-              </NavLink>
-              <NavLink
-                to="/services"
-                className="px-8 py-5 bg-brand-sage text-brand-heading rounded-full text-sm font-medium shadow-xl shadow-brand-sage/20 hover:opacity-90 transition-all text-center"
-              >
-                View Services
-              </NavLink>
-            </div>
-          </motion.div>
+      {/* Hero Banner Section */}
+      <section className="relative w-full h-[85vh] min-h-[600px] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/src/assets/images/healing_banner_1778983657538.png" 
+            alt="Healing Landscape" 
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+          {/* Subtle Overlay - lightened for dark text contrast */}
+          <div className="absolute inset-0 bg-white/30 backdrop-blur-[1px]" />
+        </div>
 
-          {/* Image Col */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="col-span-12 lg:col-span-5 relative hidden md:flex items-center justify-center py-12"
-          >
-            <div className="w-full aspect-[4/5] bg-brand-card rounded-[160px] relative overflow-hidden shadow-2xl border-[12px] border-white/50">
-              <img
-                src="/jennifer-scale.png"
-                alt="Jennifer Depler, LPCC"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute bottom-12 left-0 right-0 flex flex-col justify-center items-center text-center px-8">
-                <p className="font-serif italic text-xl lg:text-2xl text-white drop-shadow-md">Exhale. You are safe here.</p>
-              </div>
+        {/* Text Overlay */}
+        <div className="relative h-full flex items-start pt-24 md:pt-32">
+            <div className="max-w-7xl mx-auto px-8 md:px-12 w-full mt-12 md:mt-0">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-4xl flex flex-col gap-8"
+                >
+                    <div className="inline-block px-4 py-1.5 bg-brand-heading/10 backdrop-blur-md text-brand-heading text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] rounded-md self-start border border-brand-heading/10">
+                      In-Person Therapy in Loveland • Serving Fort Collins, Berthoud, Longmont & Online across Colorado
+                    </div>
+                    
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-brand-heading leading-[1.1]">
+                      Nurturing <span className="italic font-light">Healing</span>,<br />
+                      Cultivating <span className="italic font-light">Health</span>,<br />
+                      Inspiring <span className="italic font-light">Hope</span>.
+                    </h1>
+                    
+                    <div className="flex flex-col sm:flex-row gap-5">
+                      <NavLink
+                        to="/about"
+                        className="px-10 py-5 bg-white text-brand-heading rounded-full text-xs font-bold font-sans uppercase tracking-[0.2em] shadow-2xl hover:bg-brand-sage transition-all text-center"
+                      >
+                        Learn More
+                      </NavLink>
+                      <NavLink
+                        to="/contact"
+                        className="px-10 py-5 bg-brand-sage text-brand-heading rounded-full text-xs font-bold font-sans uppercase tracking-[0.2em] shadow-2xl hover:opacity-90 transition-all text-center"
+                      >
+                        Request Consultation
+                      </NavLink>
+                    </div>
+                </motion.div>
             </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-brand-sage/20 rounded-full -z-10 opacity-60"></div>
-            <div className="absolute bottom-20 -left-10 w-48 h-48 border border-brand-sage/30 rounded-full -z-10 opacity-20"></div>
-          </motion.div>
+        </div>
+      </section>
+
+      {/* Intro Description Section */}
+      <section className="px-8 md:px-12 py-24 md:py-32 bg-brand-bg relative overflow-hidden">
+        {/* Background Visual Elements */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-sage/10 to-transparent -z-0" />
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 0.3, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5 }}
+          className="absolute -top-24 -left-24 w-96 h-96 bg-brand-sage/20 rounded-full blur-3xl -z-0"
+        />
+        <motion.div 
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-20 right-20 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl -z-0"
+        />
+
+        <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row gap-12 md:gap-24">
+          {/* Vertical Label (Editorial touch) */}
+          <div className="hidden lg:flex flex-col justify-center">
+            <span className="[writing-mode:vertical-rl] rotate-180 text-[10px] uppercase tracking-[0.5em] text-brand-secondary/40 whitespace-nowrap font-bold h-fit select-none">
+              Compassionate Care
+            </span>
+          </div>
+
+          <div className="flex-1">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.3 }
+                }
+              }}
+              className="max-w-4xl relative"
+            >
+              {/* Left accent line for desktop */}
+              <div className="absolute -left-12 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-brand-sage to-transparent hidden lg:block opacity-50" />
+              
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                }}
+              >
+                <div className="flex items-center gap-4 mb-10">
+                  <div className="p-3 rounded-full bg-white/50 text-brand-primary shadow-sm border border-brand-border/30">
+                    <Leaf className="w-5 h-5" />
+                  </div>
+                  <div className="h-px px-12 bg-brand-border/50"></div>
+                </div>
+
+                <p className="text-3xl md:text-5xl text-brand-heading leading-[1.2] font-serif italic mb-10 tracking-tight text-balance">
+                  A warm, grounded, and trauma-informed space to navigate life's challenges.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                }}
+              >
+                <p className="text-2xl md:text-4xl text-brand-heading/80 leading-tight font-serif italic mb-12 font-light text-balance">
+                  Welcoming clients from late adolescence through the senior years.
+                </p>
+                
+                <div className="w-20 h-0.5 bg-brand-primary rounded-full"></div>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -113,7 +179,7 @@ export function Home() {
             </div>
             <div>
               <h3 className="text-[10px] uppercase font-medium text-brand-secondary mb-3 tracking-[0.2em]">Approaches</h3>
-              <p className="text-base font-serif text-brand-heading">Brain Spotting, IFS Informed, DBT, Neuro Informed, Enneagram</p>
+              <p className="text-base font-serif text-brand-heading">Brainspotting, IFS Informed, DBT, Neuro Informed, Enneagram</p>
             </div>
           </div>
           <div className="flex flex-col items-start lg:items-end w-full lg:w-auto pt-8 lg:pt-0 border-t lg:border-t-0 border-brand-border">

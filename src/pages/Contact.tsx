@@ -87,7 +87,7 @@ export function Contact() {
                                 required
                                 rows={5}
                                 className="w-full bg-brand-bg/30 border border-brand-border rounded-[32px] px-6 py-4 focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all resize-none font-sans"
-                                placeholder="Without going into detail, please share a brief glimpse of what you're hoping for support with."
+                                placeholder="If it feels comfortable, share a brief sense of what’s bringing you here and the kind of support you’re looking for."
                             />
                         </div>
                         <div className="p-8 bg-brand-bg/20 rounded-[40px] flex items-start gap-5 border border-brand-border">

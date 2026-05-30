@@ -42,7 +42,7 @@ export function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/src/assets/images/healing_banner_1778983657538.png" 
+            src="/healing_banner_1778983657538.png"
             alt="Healing Landscape" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"

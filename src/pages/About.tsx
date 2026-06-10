@@ -155,7 +155,7 @@ export function About() {
                 Beyond the Office
                 <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-sage/40 rounded-full"></span>
               </h2>
-              <div className="flex flex-col md:flex-row gap-12 items-start">
+              <div className="flex flex-col lg:flex-row gap-12 items-start">
                 <div className="prose prose-lg text-brand-body leading-relaxed font-sans max-w-none flex-1">
                   <p className="mb-4 text-lg">
                     When I’m not in the therapy room, I’m settled into the heart of my life in Northern Colorado. I am a wife and a mother to two grown children and their spouses, and I deeply cherish the time spent with my large extended family nearby.

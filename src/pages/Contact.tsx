@@ -21,12 +21,17 @@ export function Contact() {
             <Mail className="w-16 h-16 text-brand-primary opacity-20" />
             <h3 className="text-3xl font-serif text-brand-heading">Ready to Take the Next Step?</h3>
             <p className="text-brand-body font-sans text-lg leading-relaxed max-w-md">
-              Reach out directly via email or phone. Jennifer personally reads every message and responds within 1-2 business days.
+              Reaching out for support is one of the most courageous things you can do. There is no pressure, no commitment, and no wrong way to start.
             </p>
-            <p className="text-brand-body font-sans text-sm leading-relaxed max-w-md italic">
-              For your privacy and security, Jennifer uses a HIPAA-compliant email. Simply reach out at the address below and she will be in touch.
+            <p className="text-brand-body font-sans text-lg leading-relaxed max-w-md">
+              Simply send Jennifer an email at your own pace. She personally reads every message and will respond within 1-2 business days with warmth and care.
             </p>
-            <p className="text-xl font-serif text-brand-heading">JenniferDeplerCounseling@proton.me</p>
+            <div className="w-full border-t border-brand-border pt-8 flex flex-col gap-3">
+              <p className="text-brand-body font-sans text-sm leading-relaxed max-w-md italic">
+                For your privacy and security, Jennifer uses a HIPAA-compliant email so your message stays confidential from the very first word.
+              </p>
+              <p className="text-xl font-serif text-brand-heading">JenniferDeplerCounseling@proton.me</p>
+            </div>
             <p className="text-[10px] uppercase tracking-wider text-brand-secondary/80 font-sans">
               If you are experiencing a mental health emergency, please call 988 or go to your nearest emergency room.
             </p>

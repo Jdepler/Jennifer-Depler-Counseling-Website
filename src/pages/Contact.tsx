@@ -1,15 +1,7 @@
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useState, FormEvent } from 'react';
 
 export function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
     <div className="pb-32 bg-brand-bg min-h-screen">
        <section className="pt-20 pb-32 px-8 md:px-12">
@@ -19,7 +11,7 @@ export function Contact() {
                Let's Take the <br /><span className="font-light">Next Step Together.</span>
             </h1>
             <p className="text-xl text-brand-body leading-relaxed max-w-2xl font-sans">
-               Whether you have a specific question about my approach or you’re ready to schedule your free consultation, I’d love to hear from you.
+               Whether you have a specific question about my approach or you're ready to schedule your free consultation, I'd love to hear from you.
             </p>
           </div>
         </div>
@@ -27,88 +19,23 @@ export function Contact() {
 
       <section className="px-8 md:px-12">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
-              {/* Form Side */}
-              <div>
-                  {submitted ? (
-                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="bg-brand-card p-16 rounded-[80px] text-center border border-brand-border shadow-xl backdrop-blur-sm"
-                     >
-                        <div className="w-20 h-20 rounded-full bg-brand-primary flex items-center justify-center mx-auto mb-8 text-white shadow-lg border-[6px] border-white/50">
-                           <Send className="w-8 h-8" />
-                        </div>
-                        <h3 className="text-3xl font-serif text-brand-heading mb-4">Message Sent</h3>
-                        <p className="text-brand-body leading-relaxed font-sans text-lg">
-                           Thank you for reaching out, Jennifer. I will review your message and get back to you within 24-48 business hours.
-                        </p>
-                        <button
-                           onClick={() => setSubmitted(false)}
-                           className="mt-10 text-xs font-sans font-medium uppercase tracking-[0.2em] text-brand-secondary hover:text-brand-primary transition-colors"
-                        >
-                           Send another message
-                        </button>
-                     </motion.div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-8 bg-white p-12 md:p-16 rounded-[80px] border border-brand-border shadow-sm relative">
-                        <div className="absolute -top-10 -right-6 w-32 h-32 bg-brand-sage/30 rounded-full -z-10 blur-3xl opacity-40" />
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-[0.2em] text-brand-secondary font-semibold ml-1">Full Name</label>
-                                <input
-                                    required
-                                    type="text"
-                                    className="w-full bg-brand-bg/30 border border-brand-border rounded-3xl px-6 py-4 focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all font-sans"
-                                    placeholder="Your Name"
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-[0.2em] text-brand-secondary font-medium ml-1">Email Address</label>
-                                <input
-                                    required
-                                    type="email"
-                                    className="w-full bg-brand-bg/30 border border-brand-border rounded-3xl px-6 py-4 focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all font-sans"
-                                    placeholder="jennifer@example.com"
-                                />
-                            </div>
-                        </div>
-                        <div className="space-y-2">
-                            <label className="text-[10px] uppercase tracking-[0.2em] text-brand-secondary font-medium ml-1">Interested In</label>
-                            <select className="w-full bg-brand-bg/30 border border-brand-border rounded-3xl px-6 py-4 focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-brand-body font-sans appearance-none">
-                                <option>Free Consultation Call</option>
-                                <option>Individual Therapy Inquiry</option>
-                                <option>Professional Consultation</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div className="space-y-2">
-                            <label className="text-[10px] uppercase tracking-[0.2em] text-brand-secondary font-medium ml-1">A Brief Glimpse</label>
-                            <textarea
-                                required
-                                rows={5}
-                                className="w-full bg-brand-bg/30 border border-brand-border rounded-[32px] px-6 py-4 focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all resize-none font-sans"
-                                placeholder="If it feels comfortable, share a brief sense of what’s bringing you here and the kind of support you’re looking for."
-                            />
-                        </div>
-                        <div className="p-8 bg-brand-bg/20 rounded-[40px] flex items-start gap-5 border border-brand-border">
-                           <Clock className="w-6 h-6 text-brand-primary shrink-0 mt-0.5" />
-                           <div className="space-y-4">
-                              <p className="text-xs text-brand-body leading-relaxed font-serif">
-                                   Note: Every message is read within 1-2 business days. If you are experiencing a mental health emergency, please call 988 or go to your nearest emergency room.
-                              </p>
-                              <p className="text-[10px] uppercase tracking-wider text-brand-secondary/80 font-medium font-sans">
-                                   Submitting this form does not establish a therapeutic relationship.
-                              </p>
-                           </div>
-                        </div>
-                        <button
-                            type="submit"
-                            className="bg-brand-sage text-brand-heading px-12 py-5 rounded-full text-xs font-sans font-medium uppercase tracking-[0.2em] hover:opacity-90 transition-all shadow-xl shadow-brand-sage/20 w-full"
-                        >
-                            Send Message
-                        </button>
-                    </form>
-                  )}
+
+              {/* Email CTA Side */}
+              <div className="bg-white p-12 md:p-16 rounded-[80px] border border-brand-border shadow-sm flex flex-col items-center justify-center text-center gap-8">
+                <Mail className="w-16 h-16 text-brand-primary opacity-20" />
+                <h3 className="text-3xl font-serif text-brand-heading">Ready to Take the Next Step?</h3>
+                <p className="text-brand-body font-sans text-lg leading-relaxed max-w-md">
+                  Reach out directly via email or phone. Jennifer personally reads every message and responds within 1-2 business days.
+                </p>
+                
+                  href="mailto:JenniferDeplerCounseling@proton.me"
+                  className="bg-brand-sage text-brand-heading px-12 py-5 rounded-full text-xs font-sans font-medium uppercase tracking-[0.2em] hover:opacity-90 transition-all shadow-xl shadow-brand-sage/20"
+                >
+                  Send an Email
+                </a>
+                <p className="text-[10px] uppercase tracking-wider text-brand-secondary/80 font-sans">
+                  If you are experiencing a mental health emergency, please call 988 or go to your nearest emergency room.
+                </p>
               </div>
 
               <div className="space-y-14">

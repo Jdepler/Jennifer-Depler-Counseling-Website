@@ -88,62 +88,63 @@ export function About() {
                   <p className="text-sm text-brand-body leading-relaxed">Safety is the priority. We move at a pace that respects the needs of your nervous system, while integrating practical tools for emotion regulation to expand its capacity.</p>
                </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="pt-12 border-t border-brand-border">
-              <h2 className="text-3xl md:text-4xl font-serif text-brand-heading mb-6">
-                I believe...
-              </h2>
-              <div className="mb-16 relative bg-white p-10 md:p-14 rounded-[60px] border border-brand-border shadow-sm overflow-hidden group">
-                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Quote className="w-24 h-24 text-brand-primary" />
-                </div>
-                <div className="relative z-10 min-h-[180px] flex items-center">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={currentBelief}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ duration: 0.5, ease: "easeOut" }}
-                      className="w-full"
-                    >
-                      <p className="text-lg md:text-xl font-serif text-brand-heading leading-relaxed">
-                        {BELIEFS[currentBelief]}
-                      </p>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-                <div className="mt-10 flex items-center justify-between">
-                  <div className="flex gap-2">
-                    {BELIEFS.map((_, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setCurrentBelief(idx)}
-                        className={`h-1.5 rounded-full transition-all duration-300 ${
-                          currentBelief === idx ? 'w-8 bg-brand-primary' : 'w-2 bg-brand-sage/40'
-                        }`}
-                        aria-label={`Go to belief ${idx + 1}`}
-                      />
-                    ))}
-                  </div>
-                  <div className="flex gap-4">
-                    <button
-                      onClick={prevBelief}
-                      className="p-3 rounded-full border border-brand-border text-brand-primary hover:bg-brand-bg transition-colors"
-                      aria-label="Previous belief"
-                    >
-                      <ChevronLeft className="w-5 h-5" />
-                    </button>
-                    <button
-                      onClick={nextBelief}
-                      className="p-3 rounded-full bg-brand-sage text-brand-heading shadow-md hover:opacity-90 transition-colors"
-                      aria-label="Next belief"
-                    >
-                      <ChevronRight className="w-5 h-5" />
-                    </button>
-                  </div>
-                </div>
+      {/* I Believe - Full Width Section */}
+      <section className="px-8 md:px-12 py-20 border-t border-brand-border">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif text-brand-heading mb-10 text-center">
+            I believe...
+          </h2>
+          <div className="relative bg-white p-10 md:p-16 rounded-[60px] border border-brand-border shadow-sm overflow-hidden group">
+            <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+              <Quote className="w-24 h-24 text-brand-primary" />
+            </div>
+            <div className="relative z-10 min-h-[120px] flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentBelief}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="w-full text-center"
+                >
+                  <p className="text-lg md:text-xl font-serif text-brand-heading leading-relaxed max-w-4xl mx-auto">
+                    {BELIEFS[currentBelief]}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+            <div className="mt-10 flex items-center justify-center gap-8">
+              <button
+                onClick={prevBelief}
+                className="p-3 rounded-full border border-brand-border text-brand-primary hover:bg-brand-bg transition-colors"
+                aria-label="Previous belief"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <div className="flex gap-2">
+                {BELIEFS.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentBelief(idx)}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                      currentBelief === idx ? 'w-8 bg-brand-primary' : 'w-2 bg-brand-sage/40'
+                    }`}
+                    aria-label={`Go to belief ${idx + 1}`}
+                  />
+                ))}
               </div>
+              <button
+                onClick={nextBelief}
+                className="p-3 rounded-full bg-brand-sage text-brand-heading shadow-md hover:opacity-90 transition-colors"
+                aria-label="Next belief"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
             </div>
           </div>
         </div>

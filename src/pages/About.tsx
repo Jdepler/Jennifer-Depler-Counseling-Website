@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { NavLink } from 'react-router-dom';
 import { Heart, Compass, Shield, Anchor, ChevronLeft, ChevronRight, Quote, Wind } from 'lucide-react';
@@ -23,6 +23,7 @@ export function About() {
   const prevBelief = () => {
     setCurrentBelief((prev) => (prev - 1 + BELIEFS.length) % BELIEFS.length);
   };
+
   return (
     <div className="pb-32 bg-brand-bg">
       {/* Header */}
@@ -64,15 +65,12 @@ export function About() {
               <p className="mb-6 text-lg">
                 I earned my Master of Arts in Clinical Mental Health Counseling from Colorado Christian University and a Bachelor of Arts in Human Relations from Milligan University.
               </p>
-              
               <p className="mb-6 text-lg">
                 The focus of my post-graduate training is in Brainspotting, Internal Family Systems (IFS), and the treatment of complex trauma.
               </p>
-
               <p className="mb-6 text-lg">
                 I journey with clients who want to reduce suffering, increase wellness, and relate with themselves and others in a healthier way. As a compassionate and dedicated therapist, who is also a follower of the teachings of Jesus, I delight in assisting those facing the challenges of adulthood across the lifespan.
               </p>
-
               <p className="mb-6 text-lg">
                 Whether you identify with a specific religious tradition, follow a spiritual path, or are exploring your own beliefs, I am here to be an empathetic and non-judgmental companion on your journey. Together, we can grow in understanding of the deeper dimensions of your experience of life, enhancing wellness, clarity, meaning, purpose, and connection.
               </p>
@@ -99,7 +97,6 @@ export function About() {
                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                   <Quote className="w-24 h-24 text-brand-primary" />
                 </div>
-                
                 <div className="relative z-10 min-h-[180px] flex items-center">
                   <AnimatePresence mode="wait">
                     <motion.div
@@ -116,7 +113,6 @@ export function About() {
                     </motion.div>
                   </AnimatePresence>
                 </div>
-
                 <div className="mt-10 flex items-center justify-between">
                   <div className="flex gap-2">
                     {BELIEFS.map((_, idx) => (
@@ -149,45 +145,46 @@ export function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="pt-12 border-t border-brand-border">
-              <h2 className="text-4xl md:text-5xl font-serif text-brand-heading mb-8 relative inline-block">
-                Beyond the Office
-                <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-sage/40 rounded-full"></span>
-              </h2>
-              <div className="flex flex-col lg:flex-row gap-12 items-start">
-                <div className="prose prose-lg text-brand-body leading-relaxed font-sans max-w-none flex-1">
-                  <p className="mb-4 text-lg">
-                    When I’m not in the therapy room, I’m settled into the heart of my life in Northern Colorado. I am a wife and a mother to two grown children and their spouses, and I deeply cherish the time spent with my large extended family nearby.
-                  </p>
-                  <p className="text-lg mb-6">
-                    Outside the office, I enjoy long walks with friends, getting lost in a good book, checking in on the local honeybees, and spending time with my feathered and furry friends, especially my backyard chickens, who have far more opinions than you’d expect.
-                  </p>
-                  <p className="text-lg mb-6">
-                    I’m fueled by a slightly concerning amount of coffee and love being covered in paint or sawdust from a DIY project. I am energized by renovation of both hearts and homes. 
-                  </p>
-                  <p className="text-lg mb-6">
-                    I treasure grounding moments of connection with humans, hens, hounds, and honeybees alike. And yes, if my carousel photo tells you anything, it’s that I don’t mind embracing a little whimsy along the way. 
-                  </p>
-                  <p className="text-lg">
-                    Life can feel like a carousel sometimes: a little dizzying, occasionally chaotic, but still worth holding on and enjoying the ride.
-                  </p>
-                </div>
-                <div className="w-full md:w-72 lg:w-96 shrink-0 pt-8 md:pt-0">
-                  <div className="relative group">
-                    {/* Decorative organic shape behind photo */}
-                    <div className="absolute -inset-4 bg-brand-sage/20 rounded-[50px] rotate-3 -z-10 group-hover:rotate-6 transition-transform duration-700" />
-                    
-                    <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-[0_32px_64px_rgba(0,0,0,0.12)] border-8 border-white/50 transform md:-rotate-1 hover:rotate-0 transition-transform duration-500 bg-brand-card">
-                      <img 
-                        src={carouselPhoto} 
-                        alt="Jennifer Depler on a carousel goose" 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                    </div>
-                  </div>
+      {/* Beyond the Office - Full Width Section */}
+      <section className="px-8 md:px-12 py-20 border-t border-brand-border">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-serif text-brand-heading mb-12 relative inline-block">
+            Beyond the Office
+            <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-sage/40 rounded-full"></span>
+          </h2>
+          <div className="flex flex-col lg:flex-row-reverse gap-16 items-start">
+            <div className="w-full lg:w-96 shrink-0">
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-brand-sage/20 rounded-[50px] rotate-3 -z-10 group-hover:rotate-6 transition-transform duration-700" />
+                <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-[0_32px_64px_rgba(0,0,0,0.12)] border-8 border-white/50 transform lg:-rotate-1 hover:rotate-0 transition-transform duration-500 bg-brand-card">
+                  <img
+                    src={carouselPhoto}
+                    alt="Jennifer Depler on a carousel goose"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
               </div>
+            </div>
+            <div className="flex-1 prose prose-lg text-brand-body leading-relaxed font-sans max-w-none">
+              <p className="mb-4 text-lg">
+                When I'm not in the therapy room, I'm settled into the heart of my life in Northern Colorado. I am a wife and a mother to two grown children and their spouses, and I deeply cherish the time spent with my large extended family nearby.
+              </p>
+              <p className="text-lg mb-6">
+                Outside the office, I enjoy long walks with friends, getting lost in a good book, checking in on the local honeybees, and spending time with my feathered and furry friends, especially my backyard chickens, who have far more opinions than you'd expect.
+              </p>
+              <p className="text-lg mb-6">
+                I'm fueled by a slightly concerning amount of coffee and love being covered in paint or sawdust from a DIY project. I am energized by renovation of both hearts and homes.
+              </p>
+              <p className="text-lg mb-6">
+                I treasure grounding moments of connection with humans, hens, hounds, and honeybees alike. And yes, if my carousel photo tells you anything, it's that I don't mind embracing a little whimsy along the way.
+              </p>
+              <p className="text-lg">
+                Life can feel like a carousel sometimes: a little dizzying, occasionally chaotic, but still worth holding on and enjoying the ride.
+              </p>
             </div>
           </div>
         </div>
@@ -197,7 +194,7 @@ export function About() {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-sage/10 -skew-x-12" />
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row gap-20 items-center">
             <div className="lg:w-1/2">
-                <motion.h2 
+                <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

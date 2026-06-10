@@ -138,18 +138,6 @@ export function Services() {
                    ))}
                 </div>
               </div>
-              <div className="relative hidden lg:block">
-                  <div className="aspect-[4/5] rounded-[120px] overflow-hidden shadow-2xl border-[12px] border-brand-bg relative group">
-                    <img
-                        src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=1200"
-                        alt="Calm Focus"
-                        className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000"
-                        referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-brand-primary/10 mix-blend-overlay"></div>
-                  </div>
-                  <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-sage/20 rounded-full -z-10 blur-2xl opacity-40"></div>
-              </div>
           </div>
       </section>
 

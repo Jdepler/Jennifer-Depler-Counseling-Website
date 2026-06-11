@@ -24,7 +24,7 @@ export function Contact() {
               Reaching out for support is one of the most courageous things you can do. There is no pressure, no commitment, and no wrong way to start.
             </p>
             <p className="text-brand-body font-sans text-lg leading-relaxed max-w-md">
-              Simply send Jennifer an email at your own pace. She personally reads every message and will respond within 1-2 business days with warmth and care.
+              Simply send me an email at your own pace. I personally read every message and will respond within 1-2 business days.
             </p>
             <div className="w-full border-t border-brand-border pt-8 flex flex-col gap-3">
               <p className="text-brand-body font-sans text-sm leading-relaxed max-w-md italic">

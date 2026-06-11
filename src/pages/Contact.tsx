@@ -28,7 +28,7 @@ export function Contact() {
             </p>
             <div className="w-full border-t border-brand-border pt-8 flex flex-col gap-3">
               <p className="text-brand-body font-sans text-sm leading-relaxed max-w-md italic">
-                For your privacy and security, Jennifer uses a HIPAA-compliant email so your message stays confidential from the very first word.
+                For your privacy and security, I use a HIPAA-compliant email so your message stays confidential from the very first word.
               </p>
               <p className="text-xl font-serif text-brand-heading">JenniferDeplerCounseling@proton.me</p>
             </div>

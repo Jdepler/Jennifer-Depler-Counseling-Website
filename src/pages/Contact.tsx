@@ -30,7 +30,7 @@ export function Contact() {
               <p className="text-brand-body font-sans text-sm leading-relaxed max-w-md italic">
                 For your privacy and security, I use a HIPAA-compliant email so your message stays confidential from the very first word.
               </p>
-              <a href="mailto:JenniferDeplerCounseling@proton.me" className="text-xl font-serif text-brand-heading hover:opacity-70 transition-opacity underline underline-offset-4">JenniferDeplerCounseling@proton.me</a>
+              <a href="mailto:JenniferDeplerCounseling@proton.me" className="text-xl font-serif text-brand-heading hover:opacity-70 transition-opacity underline underline-offset-4 break-all">JenniferDeplerCounseling@proton.me</a>
             </div>
             <p className="text-[10px] uppercase tracking-wider text-brand-secondary/80 font-sans">
               If you are experiencing a mental health emergency, please call 988 or go to your nearest emergency room.
